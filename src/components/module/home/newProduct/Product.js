@@ -34,8 +34,8 @@ const Product = ({ title, subtitle }) => {
   
   return (
     <div>
-      <div className="container">
-        <div className="row">
+      <div className="container mx-9">
+        <div className="row ms-1">
           <div className="products">
             <h3 className="title">{title}</h3>
             <p>{subtitle}</p>

@@ -179,8 +179,8 @@ const Content = () => {
               </div>
             </div>
           </div>
-          <div className="row mt-3">
-            <div className="col-lg-12">
+          <div className="row mt-3 mx-1">
+            <div className="col-lg-12 ms-1">
               <h3 className="title-info">Informasi Produk</h3>
               <h3 className="mt-4 text-sub">Condition</h3>
               <p className="text-danger">{product.condition}</p>

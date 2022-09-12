@@ -5,10 +5,10 @@ import line48 from '../../../../assets/image/detail products/Line 48.png'
 const InformationProduct = () => {
   return (
       <div>
-          <div className="container">
-                <div className="row mt-3">
+          <div className="container mx-9">
+                <div className="row ms-1">
                     </div>
-                    <div className="row mt-3">
+                    <div className="row mx-1">
                     <h3 className="title-info">Product Review</h3>
                     <div className="col-lg-2">
                         <h4 className="mt-4 text-rating">5.0 <small className="text-finis">/10</small></h4>
@@ -20,7 +20,7 @@ const InformationProduct = () => {
                             <div className="bi-star-fill ms-2"></div>
                         </div>
                     </div>
-                    <div className="col-lg-4 mt-4 ">
+                    <div className="col-lg-4 mt-4">
                         <div className="d-flex justify-content-start start">
                             <div className="bi-star-fill text-warning"> </div>
                             <p className="ms-1">5</p>
