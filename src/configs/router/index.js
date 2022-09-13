@@ -40,7 +40,12 @@ function Router() {
              <Home />
           </RequireAuth>
        } />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/detail/:id" element={
+          <RequireAuth>
+            <Detail />
+          </RequireAuth>
+        
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/registerSeller" element={<RegisterSeller />} />
