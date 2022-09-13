@@ -23,9 +23,13 @@ const updateProduct = (data, id,saveImage,setShow) => async (dispatch) => {
       icon: "success",
      //  title: "Register is Success!",
       text: (products.data.message),
+
     });
     setShow(false);
     const result = products.data.data;
+
+    window.location.reload(false)
+
     dispatch({ type: "UPDATE_PRODUCT", payload: result });
   } catch (err) {
     console.error(err.message);

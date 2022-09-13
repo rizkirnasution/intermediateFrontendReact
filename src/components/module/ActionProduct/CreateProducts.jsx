@@ -37,6 +37,8 @@ const ModalCreate = ({children}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createProduct(data,saveImage,setShow))
+    
+    window.location.reload(false);
   };
 
   return (
