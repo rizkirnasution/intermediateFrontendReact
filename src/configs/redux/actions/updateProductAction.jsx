@@ -17,14 +17,23 @@ const updateProduct = (data, id,saveImage,setShow) => async (dispatch) => {
             "Content-Type": "multipart/form-data",
         },
     });
+    
     console.log(products);
-    Swal.fire("Updated!", "Product Update Succes!", "success");
+    Swal.fire({
+      icon: "success",
+     //  title: "Register is Success!",
+      text: (products.data.message),
+    });
     setShow(false);
     const result = products.data.data;
     dispatch({ type: "UPDATE_PRODUCT", payload: result });
   } catch (err) {
     console.error(err.message);
-     Swal.fire("Failed!", "Product Update Failed!", "error");
+    Swal.fire({
+      icon: "error",
+     //  title: "Register is Success!",
+      text: (err.data.message),
+    });
     setShow(false);
   }
 };

@@ -20,14 +20,20 @@ const createProduct = (data, saveImage,setShow) => async (dispatch) => {
         },
     });
     console.log(products);
-    Swal.fire("Created!", "Product Created Success!", "success");
+    Swal.fire({
+      icon: "success",
+      text: (products.data.message),
+    });
     setShow(false);
     const result = products.data.data;
     dispatch({ type: ActionTypes.CREATE_PRODUCTS, payload: result });
   } catch (err) {
     console.error(err.message);
     dispatch({type: ActionTypes.GET_PRODUCT_ERROR, payload: err.response})
-    Swal.fire("Failed!", "Product Create Failed!", "error");
+    Swal.fire({
+      icon: "error",
+      text: (err.data.message),
+    });
     setShow(false);
   }
 };
