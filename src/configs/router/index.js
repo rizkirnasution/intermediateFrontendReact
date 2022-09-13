@@ -36,9 +36,7 @@ function Router() {
         <Route path="/" element={<Navigate to="/Home" replace="true" />} />
         {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/home" element={
-          <RequireAuth>
-             <Home />
-          </RequireAuth>
+       <Home />
        } />
         <Route path="/detail/:id" element={
           <RequireAuth>
